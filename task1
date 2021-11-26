@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, positive = 0;
+    do
+    {
+        printf("Кількість чисел: ");
+        scanf("%i", &n);
+    }
+    while(n < 1 || n > 100);
+
+    int A[n];
+    printf("Введіть числа: \n");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%i", &A[i]);
+        if ( A[i] > 0) positive++;
+    }
+
+    printf("%i\n", positive);
+    if (positive!=0){
+        for (int i = 0; i < n; i++)
+        {
+            if ( A[i] > 0) printf("%i ", A[i]);
+        }
+    }
+    else printf("NO");
+}
